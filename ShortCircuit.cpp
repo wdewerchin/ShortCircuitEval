@@ -19,13 +19,14 @@ int main(int argc, char * argv[])
 {
    string sPattern = { "123456 " };
 
+   // default pattern can be replace with the optional first command line parameter
    if (argc > 1) sPattern = argv[1];
 
    cout << "Pattern testing: " << sPattern << endl;
 
-   bool bOne   = false;
-   bool bTwo   = false;
-   bool bThree = false;
+   auto bOne   = false;
+   auto bTwo   = false;
+   auto bThree = false;
 
    cout << "Overall: ";
    if (   (bOne   = (sPattern.find("1") != string::npos))
@@ -51,11 +52,6 @@ int main(int argc, char * argv[])
    // Intentional empty control statement, but with an operation and an assignment -> mark with {}
    b = 0;  if (b != 0 && (c = a / b) > 0){};  cout << c << endl;
    b = 2;  if (b != 0 && (c = a / b) > 0){};  cout << c << endl;
-   for (auto i = 0.0; i < 10000; i*=10)
-   {
-      cout << i << " - " << log10(i) << endl;
-      if (i == 0) i = 1.0;
-   }
 
    return (0);
 }
