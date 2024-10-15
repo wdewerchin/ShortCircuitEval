@@ -53,5 +53,7 @@ int main(int argc, char * argv[])
    b = 0;  if (b != 0 && (c = a / b) > 0){};  cout << c << endl;
    b = 2;  if (b != 0 && (c = a / b) > 0){};  cout << c << endl;
 
-   return (0);
+   cout << "returning 3\n";
+
+   return (3);
 }
